@@ -7,8 +7,7 @@ public class orderAgnostic {
         int[] arr={1,3,9,15,35,39,49,58,59,69,88,99};
         int target=in.nextInt();
         int ans= check(arr,target);
-        System.out.println(ans);
-    }
+        System.out.println(ans);}
     static int check(int [] arr,int target){
         int start =0;
         int end= arr.length;

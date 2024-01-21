@@ -13,6 +13,7 @@ public class twod {
         int target = in.nextInt();
         int[] ans =check(arr,target);
         System.out.println(Arrays.toString(ans));
+        System.out.println(max(arr));
     }
     static int[] check(int[][] arr,int target){
         for (int rows = 0; rows < arr.length; rows++) {
@@ -23,5 +24,16 @@ public class twod {
             }
         }
         return new int[]{-1,-1};
+    }
+    static int max (int[][] arr){
+        int max=Integer.MIN_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            for (int cols = 0; cols < arr[row].length; cols++) {
+                if(arr[row][cols]>max){
+                    max=arr[row][cols];
+                }
+            }
+        }
+        return max;
     }
 }
